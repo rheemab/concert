@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="js">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial,sans-serif;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 16px 30px;
+            text-decoration: none;
+        }
+
+        .topnav .search-container {
+            float: right;
+            vertical-align: top;
+
+        }
+
+        .topnav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+        .topnav .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .topnav .menu-button button {
+            float: left;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-left: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .topnav .menu-button button:hover {
+            background: #ccc;
+        }
+
+        .topnav .search-container button:hover {
+            background: #ccc;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav .search-container {
+                float: none;
+            }
+
+            .topnav a, .topnav input[type=text], .topnav .search-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+
+            .topnav input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: absolute;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        * {box-sizing: border-box;}
+
+        .form-inline {
+            vertical-align: top;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+
+        .form-inline label {
+            margin: 5px 10px 5px 0;
+        }
+
+        .form-inline input {
+            vertical-align: top;
+            margin: 5px 10px 5px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        .form-inline button {
+            padding: 10px 20px;
+            background-color: #3e8e41;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-inline button:hover {
+            background-color: royalblue;
+        }
+
+        @media (max-width: 800px) {
+            .form-inline input {
+                margin: 10px 0;
+            }
+
+            .form-inline {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        .login {;color: white;} /* Green */
+
+
+    </style>
+    <title></title>
+</head>
+<body>
+
+
+<div class="topnav">
+
+    <div class="dropdown" style="float:left;">
+        <button class="dropbtn"><i class="fa fa-bars"></i></button>
+        <div class="dropdown-content" style="left:0;">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+            <a href="#">Link 6</a>
+            <a href="#">Link 7</a>
+            <a href="#">Link 8</a>
+
+        </div>
+    </div>
+
+    <div class="search-container">
+
+        <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <a style="margin-left: 46px " href="/New folder (2)/home.html">Home</a>
+    <form class="form-inline" action="./action_page.php">
+        <span class="label login" style="margin-left: 12px ">Login:  </span>
+        <input type="email" id="email" style="margin-left: 12px "placeholder="Enter username" name="email">
+        <input type="password" id="pwd" placeholder="Enter password" name="pswd">
+        <button type="submit">Submit</button>
+    </form>
+
+
+</div>
+
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>Past Concerts</h2>
+            <h5>April 23rd, 2021</h5>
+            <p>Team 8.1</p>
+            <p>Shawty's like a melody in my head<br> That I can't keep out, got me singin' like<br> Na na na na everyday<br>
+                It's like my iPod's stuck on replay<br> Replay-ay-ay-ay<br> Shawty's like a melody in my head<br> That I
+                can't keep out, got me singin' like<br> Na na na na everyday<br> It's like my iPod's stuck on replay<br>
+                Replay<br> Remember the first time we met<br> You was at the mall wit yo friend<br> I was scared to
+                approach ya<br> But then you came closer<br> Hopin' you would give me a chance<br> Who would have ever
+                knew<br> That we would ever be more than friends<br> We're real worldwide, breakin' all the rules<br>
+                She like a song played again and again<br> That girl, like something off a poster<br> That girl, is a
+                dime they say<br> That girl, is a gun to my holster<br> She's running through my mind all day, ay<br>
+                Shawty's like a melody in my head<br> That I can't keep out, got me singin' like<br> Na na na na
+                everyday<br> It's like my iPod's stuck on replay<br> Replay-ay-ay-ay<br> Shawty's like a melody in my
+                head<br> That I can't keep out, got me singin' like<br> Na na na na everyday<br> It's like my iPod's
+                stuck on replay<br> Replay-ay-ay-ay<br> See you been all around the globe<br> Not once did you leave my
+                mind<br> We talk on the phone, from night 'til the morn'<br> Girl, you really changed my life<br> Doin'
+                things I never do<br> I'm in the kitchen cookin' things she likes<br> We're real worldwide, breakin' all
+                the rules<br> Someday I wanna make you my wife<br> That girl, like something off a poster<br> That girl,
+                is a dime they say (Hey)<br> That girl, is a gun to my holster<br> She's running through my mind all
+                day, ay<br> Shawty's like a melody in my head<br> That I can't keep out, got me singin' like<br> Na na
+                na na everyday<br> It's like my iPod's stuck on replay<br> Replay-ay-ay-ay<br> Shawty's like a melody in
+                my head<br> That I can't keep out, got me singin' like<br> Na na na na everyday<br> It's like my iPod's
+                stuck on replay<br> Replay-ay-ay-ay<br> I can be your melody<br> Oh, girl, I could write you a
+                symphony<br> The one that could fill your fantasies<br> So come baby girl let's sing with me, ay<br> I
+                can be your melody<br> Oh, girl, I could write you a symphony<br> The one that could fill your fantasies<br>
+                So come baby girl let's sing with me, ay<br> Na na na na na na na<br> Na na na na na na<br> Shawty got
+                me singin'<br> Na na na na na na na<br> Na na na na na na<br> Now she got me singin'<br> Shawty's like a
+                melody in my head<br> That I can't keep out, got me singin' like<br> Na na na na everyday<br> It's like
+                my iPod's stuck on replay<br> Replay-ay-ay-ay<br> Shawty's like a melody in my head<br> That I can't
+                keep out, got me singin' like<br> Na na na na everyday<br> It's like my iPod's stuck on replay<br>
+                Replay-ay-ay-ay</p>
+            <div class="fakeimg" style="height:200px;">Image</div>
+        </div>
+
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <div class="fakeimg" style="height:100px;">Image</div>
+        </div>
+        <div class="card">
+            <h3>Upcoming concerts</h3>
+            <a href="http://localhost:63342/New%20folder%20(2)/band1.html?_ijt=3dq6u2ga6r3kntg0d0ddr96fq5#">Waterparks</a>
+            <p></p>
+            <a href="https://google.com">Capstan</a>
+            <p></p>
+            <a href="https://google.com">Cremation Lily</a>
+            <p></p>
+            <a href="https://google.com">Cold Hart</a>
+            <p></p>
+            <a href="https://google.com">Horse Head</a>
+            <p></p>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <h2>Legal info</h2>
+</div>
+
+</body>
+</html>
