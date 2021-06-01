@@ -60,39 +60,41 @@
             <div class="container">
                 <div class="row">
                     <!-- Main content -->
+                    <div class="content-area col-xs-12 col-sm-12 col-md-12">
                         <div id="main" class="site-main">
                             <div id="customer_login">
                                 <div class="row">
                                     <div class="col-sm-6 col-lg-12">
-                                        <h5 class="title-login">Login</h5>
-                                        <form class="login" method="post">
+                                        <h5 class="title-login">Register</h5>
+                                        <form class="register" method="post">
                                             <p class="form-row form-row-wide">
-                                                <label for="username">Username or Email address <span class="required">*</span></label>
-                                                <input type="text" value="" id="username" name="username" class="input-text">
+                                                <label for="reg_email">Username or Email address <span class="required">*</span></label>
+                                                <input type="email" value="" id="reg_email" name="email" class="input-text">
                                             </p>
+
                                             <p class="form-row form-row-wide">
-                                                <label for="password">Password <span class="required">*</span></label>
-                                                <input type="password" id="password" name="password" class="input-text">
+                                                <label for="reg_password">Password <span class="required">*</span></label>
+                                                <input type="password" id="reg_password" name="password" class="input-text">
                                             </p>
                                             <p class="form-row">
-                                                <input type="submit" value="Login" name="login" class="button-submit">
-                                                <a href="#">Lost your password?</a>
-                                            </p>
-                                            <p class="lost_password">
-
                                                 <label class="inline" >
-                                                    <input type="checkbox" value="forever1" id="login-rememberme" name="login-rememberme"> Remember me				
+                                                    <input type="checkbox" value="forever" id="rememberme" name="rememberme"> Sign me up for events!			
                                                 </label>
                                             </p>
+                                            <p class="form-row">
+                                                <input type="submit" value="Register" name="register" class="button-submit">
+                                            </p>
+
+
                                         </form>
                                     </div>
-                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- End Main content -->
                 </div><!-- / End row content -->
+            </div>
         </div>
     </div>
 
