@@ -1,92 +1,70 @@
-<!-- the header untill the main nav -->
-<?php include 'inc/header-top.php'; ?>
-<!-- end the header untill the main nav -->
-<!-- Main Nav Menu -->
-<nav id="primary-navigation" class="site-navigation nav-show">
-    <div id="main-menu" class="main-nav main-menu">
-        <ul class="menu-nav">
-            <li class="menu-item">
-                <a href="index.php">Home</a>
-            </li>
-            <li class="menu-item">
-                <a href="amsterdam.php">Amsterdam</a>
-            </li>
-            <li class="menu-item"><a href="contact.php">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-<!-- End Main Nav Menu -->
-<!-- Rest of the header -->
-<?php include 'inc/header.php'; ?>
-<!-- end Rest of the header -->
-        <!-- Header Banner -->
-        <div class="header-banner banner-image"><!-- Banner Img -->
-            <div class="banner-wrap">
-                <div class="banner-overlay-color" style="background-color: rgba(0,0,0,0.4)"></div>
-                <div class="banner-header" style="background-image: url(assets/images/img1.jpg); min-height:350px;" >
-                    <div class="banner-content">
-                        <h3 class="title-page" data-color="#333333">Blog</h3>
-                        <div class="breadcrumb-wrap">
-                            <nav class="breadcrumb-trail breadcrumbs">
-                                <ul class="trail-items">
-                                    <li class="trail-item trail-begin">
-                                        <a href="#"><span>Home</span></a>
-                                    </li>
-                                    <li class="trail-item trail-end">
-                                        <span>Grids Category</span>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Header Banner -->
-    </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>About Us - X-Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href='assets/images/favicon.png' />
+    <link rel='stylesheet' type='text/css' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/font-awesome.min.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/themify-icons.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/flaticon.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/owl.carousel.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/slick.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/jquery.mmenu.all.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/lightbox.min.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/chosen.min.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/animate.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/jquery.scrollbar.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/jquery.bxslider.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/style.css'/>
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700|Great+Vibes|Montserrat:400,700|Open+Sans:400,400i,600,600i,700,800i" rel="stylesheet">
+</head>
+<body>
+   <header class="header header-basic header-style_16 header-sticky menu-no-transparent">
+          <div class="header-top">
+
+                          </div>
+          <div class="main-header">
+              <div class="container">
+                  <nav id="primary-navigation" class="site-navigation">
+                      <div id="main-menu" class="main-nav main-menu">
+                          <ul class="menu-nav">
+                              <li class="menu-item menu-item-has-children megamenu-menu-item active"><br>
+                              <li class="menu-item"><a href="home.html">Home</a></li>
+                              <li class="menu-item"><a href="contact.html">Contact</a></li>
+                              <li class="menu-item"><a href="login.html">Login</a></li><br>
+                              </li>
+                          </ul>
+                      </div>
+                  </nav>
+                  <!-- End Main Nav Menu -->
+                  <!-- Header Search -->
+                  <div class="header-search-main-header">
+                      <form role="search" method="get" action="/search" class="search-form">
+                          <input type="text" value="" placeholder="Search" name="q" class="search">
+                          <button type="submit" class="search-form-submit">
+                              <i class="flaticon-search"></i>
+                          </button>
+                      </form>
+                  </div>
+                  <!-- End Header Search -->
+
+              </div>
+          </div>
+      </header>
     <div class="main-content">
         <section id="section2-about">
             <div class="container">
                 <!--.title-description-block-->
                 <div class="row">
                     <div class="title-description-block title-description-block-style2 col-sm-8 col-sm-offset-2 col-xs-12 text-center wow fadeInUp" data-wow-delay="0.6s" style="padding-bottom: 120px">
-                        <h3 class="title-block">welcome to x.shop</h3>
-                        <div class="desc-block">we’re a team of creative and make amazing site ecommerce from unite states. We love colour pastel,
-                            highlight and simple, its make our design look so awesome</div>
+                        <h3 class="title-block">welcome to Music Bar</h3>
+                        <div class="desc-block">We are a venue in the centre of Leeds that hosts various different bands to perform at our bar. We allow people to purchase tickets and bands to perform at our venue</div>
                     </div>
                 </div>
-                <!--End .title-description-block-->
-                <div class="row">
-                    <div class="col-sm-5 wow fadeInLeft" data-wow-delay="0.6s">
-                        <div class="banner-text"><figure><img src="assets/images/ablout-img.jpg" alt="img"></figure></div>
+                               </div>
 
-                    </div>
-                    <div class="col-sm-7 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="desc-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-                                aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
-                            <!--/ Shortcode Icon heading-->
-                            <div class="icon-heading-wrap">
-                                <span class="icon-heading"><i class="fa fa-check"></i></span>
-                                <div class="icon-heading-content">
-                                    <h5 class="title-icon-heading">Worldwide Delivery</h5>
-                                    <p>Free delivery on all online order</p>
-                                </div>
-                            </div>
-                            <!--/ End Shortcode List Icon heading-->
-                            <div class="icon-heading-wrap">
-                                <span class="icon-heading"><i class="fa fa-check"></i></span>
-                                <div class="icon-heading-content">
-                                    <h5 class="title-icon-heading">Free Gift Card</h5>
-                                    <p>Gift cards are free. Claim them now!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/ End Shortcode List Icon heading-->
-                    </div>
-                </div>
-            </div>
         </section>
         <!-- divider  -->
         <div class="container">
@@ -97,32 +75,34 @@
             <div class="container">
                 <h5 class="title-small">Meet Our Team</h5>
                 <!-- Shortcode Our team -->
-                <div class="ourteam-wrap xshop-owl-carousel wow fadeInUp" data-wow-delay="0.6s" data-margin="30" data-number="3" data-navControl="yes" data-lop="yes">
+                <div class="ourteam-wrap xshop-owl-carousel wow fadeInUp" data-wow-delay="0.6s" data-margin="30" data-number="5" data-lop="yes">
                     <div class="team-item">
                         <figure><a href="#"><img src="assets/images/mem1.jpg" alt=""></a></figure>
                         <div class="team-item-content">
-                            <h5 class="team-name"><a href="#">Christiana Q</a></h5>
                             <div class="team-desc">Art Director/Founder Xshop</div>
                         </div>
                     </div>
                     <div class="team-item">
                         <figure><a href="#"><img src="assets/images/mem2.jpg" alt=""></a></figure>
                         <div class="team-item-content">
-                            <h5 class="team-name"><a href="#">Christiana Q</a></h5>
                             <div class="team-desc">Art Director/Founder Xshop</div>
                         </div>
                     </div>
                     <div class="team-item">
                         <figure><a href="#"><img src="assets/images/mem3.jpg" alt=""></a></figure>
                         <div class="team-item-content">
-                            <h5 class="team-name"><a href="#">Christiana Q</a></h5>
                             <div class="team-desc">Art Director/Founder Xshop</div>
                         </div>
                     </div>
                     <div class="team-item">
                         <figure><a href="#"><img src="assets/images/mem1.jpg" alt=""></a></figure>
                         <div class="team-item-content">
-                            <h5 class="team-name"><a href="#">Christiana Q</a></h5>
+                            <div class="team-desc">Art Director/Founder Xshop</div>
+                        </div>
+                    </div>
+                                        <div class="team-item">
+                        <figure><a href="#"><img src="assets/images/mem1.jpg" alt=""></a></figure>
+                        <div class="team-item-content">
                             <div class="team-desc">Art Director/Founder Xshop</div>
                         </div>
                     </div>
@@ -131,6 +111,19 @@
             </div>
         </section>
     </div>
-    <?php include 'inc/footer.php'; ?>
+    
+    <script type='text/javascript' src='assets/js/jquery.min.js'></script>
+    <script type='text/javascript' src='assets/js/owl.carousel.min.js'></script>
+    <script type='text/javascript' src='assets/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='assets/js/slick.js'></script>
+    <script type='text/javascript' src='assets/js/wow.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.mmenu.all.min.js'></script>
+    <script type='text/javascript' src='assets/js/lightbox.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.scrollbar.js'></script>
+    <script type='text/javascript' src='assets/js/chosen.jquery.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.bxslider.min.js'></script>
+    <script type='text/javascript' src='assets/js/frontend.js'></script>
+    <script type='text/javascript' src='assets/js/frontend-plugin.js'></script>
 </body>
 </html>
