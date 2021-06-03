@@ -1,33 +1,53 @@
-<?php include 'inc/header-top.php'; ?>
-<!-- Main Nav Menu -->
-<nav id="primary-navigation" class="site-navigation nav-show">
-    <div id="main-menu" class="main-nav main-menu">
-        <ul class="menu-nav">
-            <li class="menu-item">
-                <a href="index.php">Home</a>
-            </li>
-            <li class="menu-item">
-                <a href="amsterdam.php">Amsterdam</a>
-            </li>
-            <li class="menu-item active"><a href="contact.php">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-<!-- End Main Nav Menu -->
-<?php include 'inc/header.php'; ?>
-        <!-- Header Banner -->
-        <div class="header-banner banner-image"><!-- Banner Img -->
-            <div class="banner-wrap">
-                <div class="banner-overlay-color" style="background-color: rgba(0,0,0,0.4)"></div>
-                <div class="banner-header" style="background-image: url(assets/images/img1.jpg); min-height:350px;" >
-                    <div class="banner-content">
-                        <h3 class="title-page" data-color="#333333">Contact</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact - X-Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href='assets/images/favicon.png' />
+    <link rel='stylesheet' type='text/css' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='assets/css/font-awesome.min.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/themify-icons.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/flaticon.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/owl.carousel.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/slick.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/jquery.mmenu.all.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/lightbox.min.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/chosen.min.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/animate.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/jquery.scrollbar.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/jquery.bxslider.css'/>
+    <link rel='stylesheet' type='text/css' href='assets/css/style.css'/>
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700|Great+Vibes|Montserrat:400,700|Open+Sans:400,400i,600,600i,700,800i" rel="stylesheet">
+</head>
+<body>
+      <header class="header header-basic header-style_16 header-sticky menu-no-transparent">
+              <div class="container">
+                  <nav id="primary-navigation" class="site-navigation">
+                      <div id="main-menu" class="main-nav main-menu">
+                          <ul class="menu-nav">
+                              <li class="menu-item menu-item-has-children megamenu-menu-item active">
+                              <li class="menu-item"><a href="home.html">Home</a></li>
+                              <li class="menu-item"><a href="about-us.html">About us</a></li>
+                              <li class="menu-item"><a href="login.html">Login</a></li><br>
+                              </li>
+                          </ul>
+                      </div>
+                  </nav>
+                  <!-- End Main Nav Menu -->
+                  <!-- Header Search -->
+                  <div class="header-search-main-header">
+                      <form role="search" method="get" action="/search" class="search-form">
+                          <input type="text" value="" placeholder="Search" name="q" class="search">
+                          <button type="submit" class="search-form-submit">
+                              <i class="flaticon-search"></i>
+                          </button>
+                      </form>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Header Banner -->
-    </header>
+                    </div>
+
+                  <!-- End Header Search -->
+      </header>
     <div class="main-content">
         <div class="site-content-inner">
             <div class="container">
@@ -36,12 +56,9 @@
                     <div id="primary" class="content-area col-xs-12 col-sm-12 col-md-12" style="padding:150px 0 0;">
                         <div id="main" class="site-main">
                             <!-- Contact Content -->
-                            <div class="contact-wrap">
                                 <!-- Map Element -->
                                 <div class="xshop-map">
-                                    <figure>
-                                        <img src="assets/images/map.jpg" alt="img">
-                                    </figure>
+
                                 </div>
                                 <!-- End Map Element -->
                                 <!-- Contact Form Element -->
@@ -58,8 +75,7 @@
                                                             </span>
                                                             <div class="contact-info-content">
                                                                 <h6 class="title-info"> address</h6>
-                                                                <div class="desc-info">87 Rue Jeanne d'Arc, 54000
-                                                                    Nancy, France</div>
+                                                                <div class="desc-info">Leeds Beckett University, City Campus, Leeds,United Kingdom,LS1 3HE, UK</div>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -70,7 +86,7 @@
                                                             </span>
                                                             <div class="contact-info-content">
                                                                 <h6 class="title-info"> Phone</h6>
-                                                                <div class="desc-info">+(00) 123 456 789</div>
+                                                                <div class="desc-info">0845 111 0000</div>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -81,7 +97,7 @@
                                                             </span>
                                                             <div class="contact-info-content">
                                                                 <h6 class="title-info"> E-mail</h6>
-                                                                <div class="desc-info"><a href="mailto:Supporta@xshop.com">Supporta@xshop.com</a></div>
+                                                                <div class="desc-info"><a href="mailto:Supporta@xshop.com">Support@musicbar.com</a></div>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -143,7 +159,19 @@
                 </div>
             </div>
         </div>
-    </div>
-    <?php include 'inc/footer.php'; ?>
+
+    <script type='text/javascript' src='assets/js/jquery.min.js'></script>
+    <script type='text/javascript' src='assets/js/owl.carousel.min.js'></script>
+    <script type='text/javascript' src='assets/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='assets/js/slick.js'></script>
+    <script type='text/javascript' src='assets/js/wow.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.mmenu.all.min.js'></script>
+    <script type='text/javascript' src='assets/js/lightbox.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.scrollbar.js'></script>
+    <script type='text/javascript' src='assets/js/chosen.jquery.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='assets/js/jquery.bxslider.min.js'></script>
+    <script type='text/javascript' src='assets/js/frontend.js'></script>
+    <script type='text/javascript' src='assets/js/frontend-plugin.js'></script>
 </body>
 </html>

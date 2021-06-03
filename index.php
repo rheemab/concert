@@ -1,159 +1,205 @@
-<!-- the header untill the main nav -->
-<?php include 'inc/header-top.php'; ?>
-<!-- end the header untill the main nav -->
-<!-- Main Nav Menu -->
-<nav id="primary-navigation" class="site-navigation nav-show">
-    <div id="main-menu" class="main-nav main-menu">
-        <ul class="menu-nav">
-            <li class="menu-item active">
-                <a href="index.php">Home</a>
-            </li>
-            <li class="menu-item">
-                <a href="amsterdam.php">Amsterdam</a>
-            </li>
-            <li class="menu-item"><a href="contact.php">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-<!-- End Main Nav Menu -->
-<!-- Rest of the header -->
-<?php include 'inc/header.php'; ?>
-<!-- end Rest of the header -->
-<!-- Header Banner -->
-<div class="header-banner banner-slide">
-    <div class="xshop-owl-carousel banner-wrap rev_slider_wrapper" data-autoPlay="yes" data-navControl="yes" data-number="1">
-        <div class="item-slide">
-            <figure>
-                <img src="assets/images/slide-home4/slide7.png" alt="img">
-            </figure>
-            <div class="slide-content content-slide-v4 text-center">
-                <h6 class="subtitle-banner-smaller">Check out one of the most famous musea in Amsterdam</h6>
-                <h2 class="title-banner-smaller">Rijksmuseum Amsterdam</h2>
-                <a href="#" class="button-slide button-slide-light">Get your tickets now!</a>
-            </div>
-        </div>
-        <div class="item-slide">
-            <figure>
-                <img src="assets/images/slide-home4/slide8.png" alt="img">
-            </figure>
-            <div class="slide-content content-slide-v4 text-center">
-                <h6 class="subtitle-banner-smaller">Beer is all you need right? see how they make it in</h6>
-                <h2 class="title-banner-smaller">Heineken Experience</h2>
-                <a href="#" class="button-slide button-slide-light">Get your tickets now!</a>
-            </div>
-        </div>
-        <div class="item-slide">
-            <figure>
-                <img src="assets/images/slide-home4/slide9.png" alt="img">
-            </figure>
-            <div class="slide-content content-slide-v4 text-center">
-                <h6 class="subtitle-banner-smaller">Wanne ride the canals of Amsterdam</h6>
-                <h2 class="title-banner-smaller">Amsterdam Canal Cruises</h2>
-                <a href="#" class="button-slide button-slide-light">Get your tickets now!</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Header Banner -->
-</header>
-    <div class="main-content main-content-box">
+<?php
+session_start();
 
-        <section class="padding-top75">
-            <div classs="row">
-                <div class="col-sm-6 nopadding-right">
-                    <!-- Sevice Box -->
-                    <div class="sevice-box-wrap sevice-style_1">
-                        <figure><img src="assets/images/img4-h4.jpg" alt=""></figure>
-                        <div class="sevice-box-content">
-                            <h2 class="sevice-title"><img src="assets/images/lovers-logo.png" /></h2>
-                            <div class="sevide-desc">Experience Amsterdam from a unique perspective with the one hour Amsterdam Day Canal Cruise!</div>
-                            <a href="shop.html" class="sevice-button">Get Your Ticket</a>
-                        </div>
-                    </div>
-                    <!-- End Sevice Box -->
-                </div>
-                <div class="col-sm-6 nopadding-left">
-                    <div class="img-signle">
-                        <figure>
-                            <img src="assets/images/lovers-image.png" alt="">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-sm-6 nopadding-right" style="padding-right:0;">
-                    <div class="img-signle">
-                        <figure>
-                            <img src="assets/images/canal-ride.png" alt="">
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-sm-6 nopadding-left">
-                    <!-- Sevice Box -->
-                    <div class="sevice-box-wrap sevice-style_1">
-                        <figure><img src="assets/images/img4-h4.jpg" alt=""></figure>
-                        <div class="sevice-box-content">
-                            <h2 class="sevice-title"><img src="assets/images/canal-logo.png" /></h2>
-                            <div class="sevide-desc">Een leuke activiteit die niet mag ontbreken tijdens een dagje uit in Amsterdam. Vaar door de Amsterdamse grachten en maak kennis met alle bezienswaardigheden van het Unesco Werelderfgoed. Ontdek op een van de boottochten van Canal waarom Amsterdam het mooist is vanaf het water.</div>
-                            <a href="shop.html" class="sevice-button">Get Your Ticket</a>
-                        </div>
-                    </div>
-                    <!-- End Sevice Box -->
-                </div>
-                  <!-- End Product Signle Item -->
+    include("connection.php");
+	include("functions.php");
+	
+	$user_data = check_login($con);
+
+
+?>
+
+
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <link rel="shortcut icon" href='assets/images/favicon.png' />
+      <link rel='stylesheet' type='text/css' href='assets/css/bootstrap.min.css'>
+      <link rel='stylesheet' type='text/css' href='assets/css/font-awesome.min.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/themify-icons.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/flaticon.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/owl.carousel.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/slick.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/jquery.mmenu.all.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/lightbox.min.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/chosen.min.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/animate.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/jquery.scrollbar.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/jquery.bxslider.css'/>
+      <link rel='stylesheet' type='text/css' href='assets/css/style.css'/>
+      <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700|Great+Vibes|Montserrat:400,700|Open+Sans:400,400i,600,600i,700,800i" rel="stylesheet">
+  </head>
+  <body>
+      <header class="header header-basic header-style_16 header-sticky menu-no-transparent">
+          <div class="header-top">
+
+                          </div>
+          <div class="main-header">
+              <div class="container">
+                  <nav id="primary-navigation" class="site-navigation">
+                      <div id="main-menu" class="main-nav main-menu">
+                          <ul class="menu-nav">
+                              <li class="menu-item menu-item-has-children megamenu-menu-item active">
+                              <li class="menu-item"><a href="about-us.html">About us</a></li>
+                              <li class="menu-item"><a href="contact.html">Contact</a></li>
+                              <li class="menu-item"><a href="login.html">Login</a></li><br>
+                              </li>
+                          </ul>
+                      </div>
+                  </nav>
+                  <!-- End Main Nav Menu -->
+                  <!-- Header Search -->
+                  <div class="header-search-main-header">
+                      <form role="search" method="get" action="/search" class="search-form">
+                          <input type="text" value="" placeholder="Search" name="q" class="search">
+                          <button type="submit" class="search-form-submit">
+                              <i class="flaticon-search"></i>
+                          </button>
+                      </form>
+                  </div>
+                  <!-- End Header Search -->
+
               </div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-sm-6 nopadding-right" style="padding-right:0;">
-                  <!-- Sevice Box -->
-                  <div class="sevice-box-wrap sevice-style_1">
-                      <figure><img src="assets/images/img4-h4.jpg" alt=""></figure>
-                      <div class="sevice-box-content">
-                          <h2 class="sevice-title"><img src="assets/images/body-worlds-logo.jpg" /></h2>
-                          <div class="sevide-desc">De zoektocht naar geluk en liefde domineert onze levens, maar wat bepaalt of we gelukkig zijn? Het anatomisch museum BODY WORLDS: The Happiness Project in hartje Amsterdam neemt bezoekers mee op een wonderbaarlijke reis door het menselijk lichaam, op zoek naar wat ons gelukkig maakt en wat het effect hiervan is op onze gezondheid.</div>
-                          <a href="shop.html" class="sevice-button">Get Your Ticket</a>
+          </div>
+      </header>
+      <div class="main-content">
+          <section id="section591">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-8">
+                          <!-- Banner Slide -->
+                          <div class="header-banner banner-slide">
+                              <div class="xshop-owl-carousel banner-wrap rev_slider_wrapper nav-control-style7" data-autoPlay="no" data-navControl="yes" data-number="1">
+                                  <div class="item-slide">
+                                      <figure>
+                                          <img src="assets/images/slide-home6/slide41.jpg" alt="img">
+                                      </figure>
+                                      <div class="slide-content content-slide-v6-1 text-center">
+                                          <h2 class="title-slide-lar">BAND NAME ONE</h2>
+                                      </div>
+                                  </div>
+                                  <div class="item-slide">
+                                      <figure>
+                                          <img src="assets/images/slide-home6/slide42.jpg" alt="img">
+                                      </figure>
+                                      <div class="slide-content content-slide-v6-1 text-center">
+                                          <h2 class="title-slide-lar">BAND NAME TWO</h2>
+                                      </div>
+                                  </div>
+                                  <div class="item-slide">
+                                      <figure>
+                                          <img src="assets/images/slide-home6/slide43.jpg" alt="img">
+                                      </figure>
+                                      <div class="slide-content content-slide-v6-1 text-center">
+                                          <h2 class="title-slide-lar">BAND NAME THREE</h2>
+                                      </div>
+                                  </div>
+                                  <div class="item-slide">
+                                      <figure>
+                                          <img src="assets/images/slide-home6/slide44.jpg" alt="img">
+                                      </figure>
+                                      <div class="slide-content content-slide-v6-1 text-center">
+                                          <h2 class="title-slide-lar">BAND NAME FOUR</h2>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- End Banner Slide-->
+                      </div>
+                                            <div class="col-sm-4">
+                              <figure>
+                                  <p class="icon-box-desc">UPCOMING PERFORMANCES:</p>
+                              </figure>
+                              </div><br>
+                      <div class="col-sm-4">
+                              <figure>
+                                  <p class="icon-box-desc">Band One:<br>
+                                            Trivium</p>
+                              </figure>
+                              </div><br>
+                      <div class="col-sm-4">
+                              <figure>
+                                  <p class="icon-box-desc">Band Two:<br>
+                                            The Front Bottoms</p>
+                              </figure>
+                               </div><br>
+                               <div class="col-sm-4">
+                              <figure>
+                                  <p class="icon-box-desc">Band Three:<br>
+                                            Capstan</p>
+                              </figure>
+                              </div><br>
+                      <div class="col-sm-4">
+                              <figure>
+                                  <p class="icon-box-desc">Band Four:<br>
+                                            Waterparks</p>
+                              </figure>
+                              </div><br>
+
+
+          <section id="section60">
+              <div class="container">
+                  
+              </div>
+          </section>
+          <section id="section61">
+              <!-- Sevice Style 4 -->
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-4 wow zoomIn" data-wow-delay="0.6s">
+                          <div class="sevice-box-wrap sevice-style_4">
+                              <div class="sevice-box-content">
+                                  <h5 class="sevice-title"><a href="#">Previous events</a></h5>
+                                  <p class="sevice-desc">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                  </p>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="col-sm-4 wow zoomIn" data-wow-delay="0.6s">
+                          <div class="sevice-box-wrap sevice-style_4">
+                              <div class="sevice-box-content">
+                                  <h5 class="sevice-title"><a href="#">This months events</a></h5>
+                                  <p class="sevice-desc">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                  </p>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="col-sm-4 wow zoomIn" data-wow-delay="0.6s">
+                          <div class="sevice-box-wrap sevice-style_4">
+                              <div class="sevice-box-content">
+                                  <h5 class="sevice-title"><a href="#">July events</a></h5>
+                                  <p class="sevice-desc">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                  </p>
+                              </div>
+
+                          </div>
                       </div>
                   </div>
-                  <!-- End Sevice Box -->
-                </div>
-                <div class="col-sm-6 nopadding-left">
-                  <div class="img-signle">
-                      <figure>
-                          <img src="assets/images/body-worlds-enter.png" alt="">
-                      </figure>
-                  </div>
-                </div>
-                    <!-- End Product Signle Item -->
-                </div>
-        </section>
-        <section>
-            <div class="row">
-                <div class="col-sm-6 nopadding-right" style="padding-right:0;">
-                    <div class="img-signle">
-                        <figure>
-                            <img src="assets/images/van-gogh-enter.png" alt="">
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-sm-6 nopadding-left">
-                    <!-- Sevice Box -->
-                    <div class="sevice-box-wrap sevice-style_1">
-                        <figure><img src="assets/images/img4-h4.jpg" alt=""></figure>
-                        <div class="sevice-box-content">
-                            <h2 class="sevice-title"><img width="180px" src="assets/images/logo-vangogh-logo.png" /></h2>
-                            <div class="sevide-desc">Vincent van Gogh (1853–1890) is one of the Netherlands’ most famous artists. Read his biography, discover the stories about his life and work, and explore his paintings and drawings in the museum's collection.</div>
-                            <a href="shop.html" class="sevice-button">Get Your Ticket</a>
-                        </div>
-                    </div>
-                    <!-- End Sevice Box -->
-                </div>
-                  <!-- End Product Signle Item -->
               </div>
-        </section>
-    </div>
-    <?php include 'inc/footer.php'; ?>
-</body>
-</html>
+              <!-- End Shortcode Colections -->
+         
+
+      <script type='text/javascript' src='assets/js/jquery.min.js'></script>
+      <script type='text/javascript' src='assets/js/owl.carousel.min.js'></script>
+      <script type='text/javascript' src='assets/js/bootstrap.min.js'></script>
+      <script type='text/javascript' src='assets/js/slick.js'></script>
+      <script type='text/javascript' src='assets/js/wow.min.js'></script>
+      <script type='text/javascript' src='assets/js/jquery.mmenu.all.min.js'></script>
+      <script type='text/javascript' src='assets/js/lightbox.min.js'></script>
+      <script type='text/javascript' src='assets/js/jquery.scrollbar.js'></script>
+      <script type='text/javascript' src='assets/js/chosen.jquery.min.js'></script>
+      <script type='text/javascript' src='assets/js/jquery-ui.min.js'></script>
+      <script type='text/javascript' src='assets/js/jquery.bxslider.min.js'></script>
+      <script type='text/javascript' src='assets/js/jquery.countdown.min.js'></script>
+      <script type='text/javascript' src='assets/js/frontend.js'></script>
+      <script type='text/javascript' src='assets/js/frontend-plugin.js'></script>
+  </body>
+  </html>
