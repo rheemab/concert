@@ -1,39 +1,3 @@
-<?php
-session_start();
-
-    include("connection.php");
-	include("functions.php");
-	
-	if($_SERVER['REQUEST_METHOD'] == "POST")
-	{
-		$user_name = $_POST['user_name'];
-		$password = $_POST['password'];
-		
-	    if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
-		{
-			
-			$user_id = random_num(20);
-			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
-			
-			mysqli_query($con, $query);
-			
-			header("Location: login.php");
-			die;
-			
-		}
-		else
-		{
-			echo "Please Enter Some Valid Information";
-
-		}
-	
-	}
-	
-  
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,41 +60,39 @@ session_start();
             <div class="container">
                 <div class="row">
                     <!-- Main content -->
-                    <div class="content-area col-xs-12 col-sm-12 col-md-12">
                         <div id="main" class="site-main">
                             <div id="customer_login">
                                 <div class="row">
                                     <div class="col-sm-6 col-lg-12">
-                                        <h5 class="title-login">Register</h5>
-                                        <form class="register" method="post">
+                                        <h5 class="title-login">Login</h5>
+                                        <form class="login" method="post">
                                             <p class="form-row form-row-wide">
-                                                <label for="text">Username or Email address <span class="required">*</span></label>
-                                                <input type="text" value="" id="text" name="user_name" class="input-text">
+                                                <label for="username">Username or Email address <span class="required">*</span></label>
+                                                <input type="text" value="" id="username" name="username" class="input-text">
                                             </p>
-
                                             <p class="form-row form-row-wide">
-                                                <label for="reg_password">Password <span class="required">*</span></label>
-                                                <input type="password" id="reg_password" name="password" class="input-text">
+                                                <label for="password">Password <span class="required">*</span></label>
+                                                <input type="password" id="password" name="password" class="input-text">
                                             </p>
                                             <p class="form-row">
+                                                <input type="submit" value="Login" name="login" class="button-submit">
+                                                <a href="#">Lost your password?</a>
+                                            </p>
+                                            <p class="lost_password">
+
                                                 <label class="inline" >
-                                                    <input type="checkbox" value="forever" id="rememberme" name="rememberme"> Sign me up for events!			
+                                                    <input type="checkbox" value="forever1" id="login-rememberme" name="login-rememberme"> Remember me				
                                                 </label>
                                             </p>
-                                            <p class="form-row">
-                                                <input type="submit" value="Register" name="register" class="button-submit">
-                                            </p>
-
-
                                         </form>
                                     </div>
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- End Main content -->
                 </div><!-- / End row content -->
-            </div>
         </div>
     </div>
 

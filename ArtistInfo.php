@@ -252,7 +252,7 @@
             }
         }
 
-        .login {;color: white;} /* Green */
+        .login {color: white;} /* Green */
 
 
     </style>
