@@ -28,7 +28,7 @@ session_start();
 					{
 						
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: index.php");
+						header("Location: loggedin.php");
 			            die;
 						
 					}
@@ -86,9 +86,9 @@ session_start();
                       <div id="main-menu" class="main-nav main-menu">
                           <ul class="menu-nav">
                               <li class="menu-item menu-item-has-children megamenu-menu-item active">
-                              <li class="menu-item"><a href="home.html">Home</a></li>
-                              <li class="menu-item"><a href="about-us.html">About us</a></li>
-                              <li class="menu-item"><a href="contact.html">Contact</a></li>
+                              <li class="menu-item"><a href="index.php">Home</a></li>
+                              <li class="menu-item"><a href="about-us.php">About us</a></li>
+                              <li class="menu-item"><a href="contact.php">Contact Us</a></li>
                               
                               </li>
                           </ul>

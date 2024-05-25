@@ -43,9 +43,9 @@ session_start();
                       <div id="main-menu" class="main-nav main-menu">
                           <ul class="menu-nav">
                               <li class="menu-item menu-item-has-children megamenu-menu-item active">
-                              <li class="menu-item"><a href="about-us.html">About us</a></li>
-                              <li class="menu-item"><a href="contact.html">Contact</a></li>
-                              <li class="menu-item"><a href="login.html">Login</a></li><br>
+                              <li class="menu-item"><a href="about-us.php">About us</a></li>
+                              <li class="menu-item"><a href="contact.php">Contact Us</a></li>
+                              <li class="menu-item"><a href="login.php">Login</a></li><br>
                               </li>
                           </ul>
                       </div>
